@@ -1,4 +1,6 @@
 public class Sales {
+    int month = 0;
+    int choiceMonth =0;
 
     public long sumSales(long[] sales) {
         long sum = 0;
@@ -9,68 +11,54 @@ public class Sales {
     }
 
     public long mediumSales(long[] sales) {
-        long sum = 0;
-        for (long sale : sales) {
-            sum += sale;
-        }
+        Sales service = new Sales();
+        long sum = service.sumSales(sales);
         long medium = sum / 12;
         return medium;
     }
 
     public int minSales(long[] sales) {
-        int minMonth = 0;
-        int month = 0;
         for (long sale : sales) {
 
-            if (sale <= sales[minMonth]) {
-                minMonth = month;
+            if (sale <= sales[choiceMonth]) {
+                choiceMonth = month;
             }
             month = month + 1;
         }
-        return minMonth + 1;
+        return choiceMonth + 1;
     }
 
     public int maxSales(long[] sales) {
-        int maxMonth = 0;
-        int month = 0;
         for (long sale : sales) {
 
-            if (sale >= sales[maxMonth]) {
-                maxMonth = month;
+            if (sale >= sales[choiceMonth]) {
+                choiceMonth = month;
             }
             month = month + 1;
         }
-        return maxMonth + 1;
+        return choiceMonth + 1;
     }
 
 
     public int underMedium(long[] sales) {
-        long sum = 0;
-        for (long sale : sales) {
-            sum += sale;
-        }
-        long medium = sum / 12;
-        int underMedium = 0;
+        Sales service = new Sales();
+        long medium = service.mediumSales(sales);
         for (long sale : sales) {
             if (sale < medium) {
-                underMedium += 1;
+                choiceMonth += 1;
             }
         }
-        return underMedium;
+        return choiceMonth;
     }
 
     public int moreMedium(long[] sales) {
-        long sum = 0;
-        for (long sale : sales) {
-            sum += sale;
-        }
-        long medium = sum / 12;
-        int moreMedium = 0;
+        Sales service = new Sales();
+        long medium = service.mediumSales(sales);
         for (long sale : sales) {
             if (sale > medium) {
-                moreMedium += 1;
+                choiceMonth += 1;
             }
         }
-        return moreMedium;
+        return choiceMonth;
     }
 }
