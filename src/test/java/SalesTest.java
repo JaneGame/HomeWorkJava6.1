@@ -2,12 +2,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 class SalesTest {
+    long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
     @org.junit.jupiter.api.Test
     void sumSalesTest() {
         Sales service = new Sales();
 
         // подготавливаем данные:
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 180;
 
 
@@ -23,7 +23,7 @@ class SalesTest {
         Sales service = new Sales();
 
         // подготавливаем данные:
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
         long expected = 15;
 
 
@@ -40,7 +40,7 @@ class SalesTest {
         Sales service = new Sales();
 
         // подготавливаем данные:
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
         long expected = 9;
 
 
@@ -56,7 +56,7 @@ class SalesTest {
         Sales service = new Sales();
 
         // подготавливаем данные:
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
         long expected = 8;
 
 
@@ -72,7 +72,7 @@ class SalesTest {
         Sales service = new Sales();
 
         // подготавливаем данные:
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
         int expected = 5;
 
 
@@ -88,7 +88,7 @@ class SalesTest {
         Sales service = new Sales();
 
         // подготавливаем данные:
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
         int expected = 5;
 
 
